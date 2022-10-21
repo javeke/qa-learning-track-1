@@ -53,7 +53,6 @@ class InventoryPage extends BasePage {
 
   async logout() {
     await this.menuButton.click();
-    await this.logoutButton.click();
   }
 
   async addItemToCart(itemName: string) {
