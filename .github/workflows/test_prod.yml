@@ -15,7 +15,7 @@ jobs:
       - name: Run automated tests
         run: npm run test:headless
       - name: Generate and publish test report
-        if: ${{ always() }}
+        if: ${{ always() }} 
         run: npm run generate_test_report
         env: 
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
