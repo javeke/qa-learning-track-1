@@ -6,7 +6,7 @@ on:
       - master
 
 jobs: 
-  build: 
+  test-and-report: 
     runs-on: ubuntu-latest
     steps: 
       - uses: actions/checkout@v3
@@ -15,6 +15,7 @@ jobs:
       - name: Run automated tests
         run: npm run test:headless
       - name: Generate and publish test report
+        if: ${{ always() }}
         run: npm run generate_test_report
         env: 
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
