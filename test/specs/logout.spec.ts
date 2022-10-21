@@ -15,6 +15,6 @@ describe('Logout Functionality:: ', () => {
   it('should logout the currently authenticated user', async () => {
     await InventoryPage.logout();
 
-    expect(await LoginPage.btnSubmit).toHaveText("LOGIN");
+    expect("LOGIN").toBeDisplayed();
   });
 });
