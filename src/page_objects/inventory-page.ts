@@ -53,6 +53,7 @@ class InventoryPage extends BasePage {
 
   async logout() {
     await this.menuButton.click();
+    await this.logoutButton.waitForClickable();
     await this.logoutButton.click();
   }
 
